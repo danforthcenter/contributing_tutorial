@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 64.0", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["littlecv"]
+
+[project]
+name = "littlecv"
+description = "littleCV: Learn to contribute to PlantCV"
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+dependencies = [
+    "matplotlib >= 1.5",
+    "numpy >= 2",
+    "pandas",
+    "python-dateutil",
+    "opencv-python-headless"
+]
+requires-python = ">=3.8"
+authors = [
+    {name = "PlantCV Team", email = "plantcv@danforthcenter.org"},
+]
+keywords = ["plantcv", "plant phenotyping", "image analysis", "computer vision"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Development Status :: 5 - Production/Stable",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+
+[project.urls]
+Homepage = "https://plantcv.org"
+Documentation = "https://plantcv.readthedocs.io"
+Repository = "https://github.com/danforthcenter/contributing_tutorial"
+
+[tool.setuptools_scm]
+version_scheme = "no-guess-dev"
