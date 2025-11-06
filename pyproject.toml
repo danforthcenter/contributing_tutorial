@@ -16,6 +16,7 @@ dependencies = [
     "numpy >= 2",
     "pandas",
     "python-dateutil",
+    "scikit-image >= 0.19",
     "opencv-python-headless"
 ]
 requires-python = ">=3.8"
