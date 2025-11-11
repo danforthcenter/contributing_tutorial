@@ -7,8 +7,7 @@ from skimage.morphology import remove_small_objects
 
 
 def fill(bin_img, size, plot=True):
-    """
-    Identifies objects and fills objects that are less than size.
+    """Identifies objects and fills objects that are less than size.
 
     Inputs:
     bin_img      = Binary image data
