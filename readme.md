@@ -30,10 +30,7 @@ The final piece of the `workflow.ipynb` checks the area phenotype, when that che
 * 4: Restart Jupyter Kernel and run all cells again or rerun tests. Make edits and test them until tests pass.
 * 5: Commit your changes (`git commit -m "your commit message here"`). This is like saving the files on your branch. How often you do this and how granular commits are is mostly up to you.
 * 6: Push your changes to github (`git push origin main`). This syncs the changes you've committed to github so that other people could pull them and use them locally.
-* 7: Open a Pull Request. These are a feature of Github, not of Git itself, so we'll have to do this online or through a software like Github Desktop.
-
-Once your changes pass tests locally
-
+* 7: Open a Pull Request. These are a feature of Github, not of Git itself, so we'll have to do this online or through a software like Github Desktop. Go to `https://github.com/danforthcenter/contributing_tutorial/tree/YOUR_BRANCH_NAME` or to [`https://github.com/danforthcenter/contributing_tutorial`](https://github.com/danforthcenter/contributing_tutorial) and use the branch dropdown menu to select your branch. On your branch there should be a green `Compare and pull request` button, click that and fill out the template. There is a sidebar of options for labels, assignees, reviewers, etc. In `PlantCV` you'll; use those to describe the purpose of your PR at a very high level, mark it for a certain version milestone or request certain reviewers based on who has domain expertise or last edited those files. Once you are done with the description click `create pull request`. Once the pull request is created the automated checks will run, if those pass then you are done!
 
 ### The Functions
 
