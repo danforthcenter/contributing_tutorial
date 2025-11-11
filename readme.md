@@ -8,7 +8,11 @@ To get started you will need an environment with at least `numpy`, `cv2`, and `.
 
 ### Installing littlecv
 
-Clone this repository, `cd` to the base of this repo, and run `pip install -e .` Note that this is basically the same way you will set up your editable `PlantCV` installation for when you are contributing to the codebase.
+* First, Clone this repository (`git clone https://github.com/danforthcenter/contributing_tutorial.git`). Throughout this readme we include git CLI commands but Github Desktop, Git Kraken, or Git through VSCode/other IDEs are all friendlier options and worth learning to use.
+* Next, `cd` to the cloned repo (`cd contributing_tutorial`)
+* Install `littlecv` by running `pip install -e .`. You should do this with your `PlantCV` conda environment active, or in another suitable environment.
+
+Now you will have an editable version of `littlecv` installed locally.
 
 ## The task
 
@@ -16,7 +20,19 @@ In this repository there is a small Python library called `littleCV`, these are 
 
 There is also an iPython notebook running a simple workflow using `littleCV`. In the course of running that notebook there will be bugs in those functions that you'll need to fix. The point of this task is not to do complex troubleshooting but just to familiarize with making edits and contributing to a version controlled codebase like `PlantCV`.
 
-The final piece of the `workflow.ipynb` checks the area phenotype, when that check returns `True` you have made the required edit in the `littlecv` codebase and you can send your edits to github. You should not be editing steps in the `workflow.ipynb` file to try to make that last statement return `True`, the only changes you need to make are in the codebase.
+The final piece of the `workflow.ipynb` checks the area phenotype, when that check returns `True` you have made the required edit in the `littlecv` codebase and you can send your edits to github. You should not be editing steps in the `workflow.ipynb` file to try to make that last statement return `True`, the only changes you need to make are in the codebase. If you prefer to work outside of jupyter notebooks you can also make edits to the `littlecv` codebase and run the tests for the package with the `py.test --cov littlecv` in the `contributing_tutorial` directory which will run the test in the `contributing_tutorial/tests` directory which makes the same assertion as at the end of the jupyter notebook. Once you are contributing to `PlantCV` you should familiarize with troubleshooting based on reports from `py.test`.
+
+#### Steps
+
+* 1: Open a branch with your name (`git checkout -b first_last`).
+* 2: Check current behavior either in jupyter (run `jupyter-lab` and use GUI) or with the tests (run `py.test --cov littlecv`)
+* 3: Edit `littlecv` code.
+* 4: Restart Jupyter Kernel and run all cells again or rerun tests. Make edits and test them until tests pass.
+* 5: Commit your changes (`git commit -m "your commit message here"`). This is like saving the files on your branch. How often you do this and how granular commits are is mostly up to you.
+* 6: Push your changes to github (`git push origin main`). This syncs the changes you've committed to github so that other people could pull them and use them locally.
+* 7: Open a Pull Request. These are a feature of Github, not of Git itself, so we'll have to do this online or through a software like Github Desktop.
+
+Once your changes pass tests locally
 
 
 ### The Functions
