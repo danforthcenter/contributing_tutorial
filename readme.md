@@ -30,7 +30,7 @@ The final piece of the `workflow.ipynb` checks the area phenotype, when that che
 #### Steps
 
 * 1: Open a branch with your name (`git checkout -b first_last`).
-* 2: Check current behavior either in jupyter (run `jupyter-lab` and use GUI) or with the tests (run `py.test --cov littlecv`)
+* 2: Check current behavior either in jupyter (run `jupyter-lab` and use GUI) or with the tests (run `py.test --cov littlecv --cov-report="term-missing"`)
 * 3: Edit `littlecv` code.
 * 4: Restart Jupyter Kernel and run all cells again or rerun tests. Make edits and test them until tests pass.
 * 5: Commit your changes (`git commit -m "your commit message here"`). This is like saving the files on your branch. How often you do this and how granular commits are is mostly up to you.
