@@ -25,13 +25,3 @@ def plot_image(img, cmap=None, plot=True, **kwargs):
             plt.figure()
             plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
             plt.show()
-
-        elif cmap is None and len(dimensions) == 2:
-            plt.figure()
-            plt.imshow(img, cmap="gray")
-            plt.show()
-
-        elif cmap is not None and len(dimensions) == 2:
-            plt.figure()
-            plt.imshow(img, cmap=cmap)
-            plt.show()

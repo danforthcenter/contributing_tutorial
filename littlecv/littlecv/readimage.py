@@ -21,13 +21,6 @@ def readimage(filename, plot=True):
     """
 
     img = cv2.imread(filename, -1)
-    # Default to drop alpha channel if user doesn't specify 'rgba'
-    if len(np.shape(img)) == 3 and np.shape(img)[2] == 4:
-        img = cv2.imread(filename)
-
-    if img is None:
-        raise RuntimeError("Failed to open" + filename)
-
     # Split path from filename
     path, img_name = os.path.split(filename)
     # we are always going to debug in this dummy version
