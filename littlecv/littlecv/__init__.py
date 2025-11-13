@@ -10,7 +10,7 @@ from littlecv.littlecv.fill import fill
 from littlecv.littlecv.plot_image import plot_image
 
 __all__ = [
-    "analyze_size",
+    "size",
     "Outputs",
     "readimage",
     "rgb2gray_lab",
