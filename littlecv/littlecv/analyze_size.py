@@ -126,7 +126,7 @@ def _analyze_size(img, mask, label):
     # the error you are looking for is below
     outputs.add_observation(sample=label, variable='area', trait='area',
                             method='plantcv.plantcv.analyze.size', scale="pixels", datatype=int,
-                            value=hull_area, label="pixels")
+                            value=area, label="pixels")
     # the error you are looking for is above
     outputs.add_observation(sample=label, variable='convex_hull_area', trait='convex hull area',
                             method='plantcv.plantcv.analyze.size', scale="pixels", datatype=int,
