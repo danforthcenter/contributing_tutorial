@@ -1,5 +1,5 @@
 # Dummy versioning
-# __version__ = "0.0.1"
+__author__ = "soon you"
 
 from littlecv.littlecv.analyze_size import size
 from littlecv.littlecv.outputs import Outputs
