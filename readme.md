@@ -4,15 +4,19 @@ This repository is a place for you to learn to contribute to PlantCV in one of o
 
 ## Getting started
 
-To get started you will need an environment with at least `numpy`, `cv2`, and `...` python libraries installed. If you are looking to contribute to PlantCV then you may already have a conda environment set up for PlantCV and that would work great for this as well.
+To get started you will need an environment with at least `numpy`, `cv2`, `matplotlib`, `pandas`, `python-dateutil`, and `skikit-image` Python libraries installed. We recommend installing `PlantCV` in editable mode if you have not already done so as that will be best for contributing and will install everything you need for this activity. If you are looking to contribute to PlantCV then you may already have a conda environment set up for `PlantCV` and that would work for this workshop as well, whether `PlantCV` is editable or not in that installation.
 
 ### Installing littlecv
 
-* First, Clone this repository (`git clone https://github.com/danforthcenter/contributing_tutorial.git`). Throughout this readme we include git CLI commands but Github Desktop, Git Kraken, or Git through VSCode/other IDEs are all friendlier options and worth learning to use.
+* First, Clone this repository (`git clone https://github.com/danforthcenter/contributing_tutorial.git`). Throughout this readme we include git CLI commands but [Github Desktop](https://github.com/apps/desktop), [Git Kraken](https://www.gitkraken.com/), or Git through VSCode/other IDEs are all friendlier options and worth learning to use.
 * Next, `cd` to the cloned repo (`cd contributing_tutorial`)
-* Install `littlecv` by running `pip install -e .`. You should do this with your `PlantCV` conda environment active, or in another suitable environment.
+* Finally, with your `PlantCV` or equivalent environment active, install `littlecv` by running `pip install -e .`.
 
-Now you will have an editable version of `littlecv` installed locally.
+Now you will have an editable version of `littlecv` installed locally. You can check your installation by running this command, which should tell you that you'll be an author soon:
+
+```
+python -c "from littlecv import littlecv as lcv; print(lcv.__author__)"
+```
 
 ## The task
 
@@ -21,6 +25,7 @@ In this repository there is a small Python library called `littleCV`, these are 
 There is also an iPython notebook running a simple workflow using `littleCV`. In the course of running that notebook there will be bugs in those functions that you'll need to fix. The point of this task is not to do complex troubleshooting but just to familiarize with making edits and contributing to a version controlled codebase like `PlantCV`.
 
 The final piece of the `workflow.ipynb` checks the area phenotype, when that check returns `True` you have made the required edit in the `littlecv` codebase and you can send your edits to github. You should not be editing steps in the `workflow.ipynb` file to try to make that last statement return `True`, the only changes you need to make are in the codebase. If you prefer to work outside of jupyter notebooks you can also make edits to the `littlecv` codebase and run the tests for the package with the `py.test --cov littlecv` in the `contributing_tutorial` directory which will run the test in the `contributing_tutorial/tests` directory which makes the same assertion as at the end of the jupyter notebook. Once you are contributing to `PlantCV` you should familiarize with troubleshooting based on reports from `py.test`.
+
 
 #### Steps
 
