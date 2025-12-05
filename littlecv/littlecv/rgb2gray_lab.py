@@ -1,4 +1,3 @@
-import os
 import cv2
 from littlecv.littlecv.plot_image import plot_image
 
@@ -16,7 +15,7 @@ def rgb2gray_lab(rgb_img, channel, plot=True):
         color subchannel (l = lightness, a = green-magenta, b = blue-yellow)
     plot    : bool
         lazy version of pcv.params.debug
-    
+
     Returns
     -------
     numpy.ndarray
@@ -24,9 +23,6 @@ def rgb2gray_lab(rgb_img, channel, plot=True):
     """
     # Convert RGB to LAB and return the specified subchannel as a gray image
     gray_img = _rgb2lab(rgb_img=rgb_img, channel=channel)
-
-    # The allowable channel inputs are l, a or b
-    names = {"l": "lightness", "a": "green-magenta", "b": "blue-yellow"}
 
     plot_image(gray_img, plot=plot)
 

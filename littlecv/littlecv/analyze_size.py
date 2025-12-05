@@ -1,5 +1,4 @@
 """Analyzes the shape and size of objects and outputs data."""
-import os
 import cv2
 import numpy as np
 from littlecv.littlecv.outputs import Outputs
@@ -53,8 +52,6 @@ def _analyze_size(img, mask, label):
     total_edge_length = 0
     width = 0
     height = 0
-    caliper_length = 0
-    longest_path = 0
     cmx = 0
     cmy = 0
     hull_vertices = 0

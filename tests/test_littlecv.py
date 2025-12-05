@@ -1,5 +1,4 @@
 import os
-import cv2
 import matplotlib
 import numpy as np
 from littlecv import littlecv as lcv

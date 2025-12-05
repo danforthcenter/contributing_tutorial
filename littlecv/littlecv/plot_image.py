@@ -5,12 +5,10 @@ import matplotlib
 from matplotlib import pyplot as plt
 
 
-def plot_image(img, cmap=None, plot=True, **kwargs):
-    """
-    Plot an image to the screen.
+def plot_image(img, plot=True, **kwargs):
+    """Plot an image to the screen.
 
     :param img: numpy.ndarray, ggplot, xarray.core.dataarray.DataArray
-    :param cmap: str
     :param plot: bool, make a plot
                (defaults True, only used internally in place of pcv.params.debug)
     :param kwargs: key-value arguments to xarray.plot method
